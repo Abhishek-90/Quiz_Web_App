@@ -32,6 +32,7 @@ html, body{
     height: 50px;
     font-size: large;
     font-weight: bold;
+    margin-top: 20px;
     /* margin-right: 29px; */
 }
 
@@ -45,6 +46,7 @@ html, body{
     height: 50px;
     font-size: large;
     font-weight: bold;
+    margin-top: 20px;
 }
 
 #Question-Answer{
@@ -61,7 +63,7 @@ html, body{
 .questions{
     /* -----------inside div with id Question-----------   */
     /* background-color: brown; */
-    height: 50px;
+    height: 45px;
     width: 80%;
     margin-bottom: 5px;
     margin-top: 20px;
@@ -83,7 +85,15 @@ html, body{
     /* background-color: brown; */
     float: left;
     width: 25%;
-    height: 40px;
+    height: 35px;
     margin-bottom: 5px;
     margin-right: 55%;
+}
+
+.ans{
+    float: left;
+    width: 16%;
+    height: 35px;
+    margin-bottom: 5px;
+    margin-right: 64%;
 }

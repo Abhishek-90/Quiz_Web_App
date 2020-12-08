@@ -26,4 +26,29 @@ function addQuestion(){
     ques_ans_div.append(option_2);
     ques_ans_div.append(option_3);
     ques_ans_div.append(option_4);
+
+    // var myParent = document.body;text
+
+    //Create array of options to be added
+    var array = ["checkbox","radio","text"];
+    var text_array = ["Multiple Ans", "Single Ans", "Paragraph"]
+
+    //Create and append select list
+    var sel = document.createElement("select");
+    sel.setAttribute("class","ans");
+    
+    var option = document.createElement("option");
+    option.setAttribute("disabled","");
+    option.setAttribute("selected","");
+    option.text="Answer Type";
+    sel.appendChild(option);
+
+    for(var i=0;i<array.length;i++){
+        var option = document.createElement("option");
+        option.setAttribute("value",array[i]);
+        option.text = text_array[i];
+        sel.appendChild(option);
+    }
+    ques_ans_div.appendChild(sel);
+
 }
