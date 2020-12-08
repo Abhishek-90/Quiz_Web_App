@@ -1,19 +1,20 @@
 html, body{
     margin: 0px;
-    height: 100%;
+    min-height: 100%;
+    max-height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    /* background-color: black; */
+    background-image: url("Grey_Texture.jpg");
 }
 
 #New_Exam_Container{
     /* ----------Inside html,body------------- */
-    background-image: url("Grey_Texture.jpg");
     width: 90%;
-    height: 100%;
+    min-height: auto;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -46,7 +47,7 @@ html, body{
     font-weight: bold;
 }
 
-#Question{
+#Question-Answer{
     /* ----------inside div NEW_EXAM_CONTAINER--------------- */
     display: flex;
     flex-direction: column;
@@ -59,9 +60,11 @@ html, body{
 
 .questions{
     /* -----------inside div with id Question-----------   */
+    /* background-color: brown; */
     height: 50px;
     width: 80%;
     margin-bottom: 5px;
+    margin-top: 20px;
 }
 
 #buttons{
@@ -73,4 +76,14 @@ html, body{
     align-content: center;
     /* align-items: center; */
     width: 100%;
+}
+
+.answer{
+    /* ------------Inside div Question--------------- */
+    /* background-color: brown; */
+    float: left;
+    width: 25%;
+    height: 40px;
+    margin-bottom: 5px;
+    margin-right: 55%;
 }
