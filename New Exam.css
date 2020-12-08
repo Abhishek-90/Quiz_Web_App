@@ -1,20 +1,20 @@
 html, body{
     margin: 0px;
-    height: 100%;
+    min-height: 100%;
+    max-height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    /* background-color: black; */
+    background-image: url("Grey_Texture.jpg");
 }
 
 #New_Exam_Container{
     /* ----------Inside html,body------------- */
-    background-image: url("Grey_Texture.jpg");
     width: 90%;
-    min-height: 100%;
-    max-height: auto;
+    min-height: auto;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -78,7 +78,7 @@ html, body{
     width: 100%;
 }
 
-.option{
+.answer{
     /* ------------Inside div Question--------------- */
     /* background-color: brown; */
     float: left;
