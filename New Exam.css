@@ -28,7 +28,7 @@ html, body{
     color: rgb(48, 48, 252);
     border: none;
     outline: none;
-    width: 40%;
+    width: 20%;
     height: 50px;
     font-size: large;
     font-weight: bold;
@@ -36,17 +36,22 @@ html, body{
     /* margin-right: 29px; */
 }
 
+
 #submit{
     /* -------------Inside div buttons----------- */
     background-color:transparent;
     color: rgb(48, 48, 252);
     border: none;
     outline: none;
-    width: 40%;
+    width: 20%;
     height: 50px;
     font-size: large;
     font-weight: bold;
     margin-top: 20px;
+}
+
+#submit:hover{
+    background-color: rgb(158, 157, 157);
 }
 
 #Question-Answer{
@@ -57,7 +62,7 @@ html, body{
     align-items: center;
     width: 100%;
     height: auto;
-    /* background-color: blue; */
+    /* background-color: red;  */
 }
 
 .questions{
@@ -67,6 +72,7 @@ html, body{
     width: 80%;
     margin-bottom: 5px;
     margin-top: 20px;
+    /* margin-left: 60px; */
 }
 
 #buttons{
@@ -91,9 +97,9 @@ html, body{
 }
 
 .ans{
-    float: left;
-    width: 16%;
+    /* float: right; */
+    width: 8%;
     height: 35px;
     margin-bottom: 5px;
-    margin-right: 64%;
+    margin-right: 72%;
 }
