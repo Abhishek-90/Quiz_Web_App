@@ -57,16 +57,52 @@ html, body{
     align-items: center;
     width: 100%;
     height: auto;
-    /* background-color: blue; */
+    background-color: blue;
 }
 
-.questions{
+.ques_div{
     /* -----------inside div with id Question-----------   */
     /* background-color: brown; */
     height: 45px;
-    width: 80%;
+    width: 100%;
     margin-bottom: 5px;
     margin-top: 20px;
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: row;
+}
+
+.ques_no_div{
+    height: 100%;
+    /* background-color: cyan; */
+    width: 3%;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ques{
+    height: 100%;
+    width: 91%;
+    /* background-color: yellow; */
+}
+
+.ques_input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    /* background-color: tomato; */
+}
+
+.ans{
+    /* float: left; */
+    width: 9%;
+    height: 100%;
+    margin-left: 2px;
+    margin-right: 2px;
+    border: none;
+    outline: none;
 }
 
 #buttons{
@@ -89,11 +125,7 @@ html, body{
     margin-bottom: 5px;
     margin-right: 55%;
 }
-
-.ans{
-    float: left;
-    width: 16%;
-    height: 35px;
-    margin-bottom: 5px;
-    margin-right: 64%;
-}
+/* 
+form{
+    background-color: rgb(228, 25, 255);
+} */
