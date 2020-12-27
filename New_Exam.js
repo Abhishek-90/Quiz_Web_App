@@ -1,6 +1,8 @@
-var question = 1;
+var question = 2;
+
 
 function addQuestion(){
+    var stg_ques = question.toString()
     var formID = document.getElementById("ques_form");
 
     var ques_div = document.createElement("div");
@@ -8,7 +10,7 @@ function addQuestion(){
 
     var ques_no_div = document.createElement("div");
     ques_no_div.setAttribute("class","ques_no_div");
-    ques_no_div.innerText = "Q" + question.toString();
+    ques_no_div.innerText = "Q" + stg_ques;
 
     // ---------creating question input field------------
     var ques = document.createElement("div");
@@ -16,9 +18,9 @@ function addQuestion(){
     
     var ques_input = document.createElement("input");
     ques_input.setAttribute("type","text");
-    ques_input.setAttribute("id","ques_input"+question.toString());
+    ques_input.setAttribute("id","ques_input"+stg_ques);
     ques_input.setAttribute("class","ques_input");
-    ques_input.setAttribute("placeholder","    Enter a question.......");
+    ques_input.setAttribute("placeholder","Enter a question.......");
     ques.appendChild(ques_input);
 
     //---------------- creating answer_type field--------------
@@ -27,7 +29,7 @@ function addQuestion(){
 
     var sel = document.createElement("select");
     sel.setAttribute("class","ans");
-    sel.setAttribute("id","ques_type"+question.toString());
+    sel.setAttribute("id","ques_type"+stg_ques);
 
     var option = document.createElement("option");
     option.setAttribute("disabled","");
@@ -42,38 +44,25 @@ function addQuestion(){
         sel.appendChild(option);
     }
 
-    // var ques = document.createElement("input");
-    // ques.setAttribute("type","text");
-    // ques.setAttribute("placeholder","Enter Question.....");
-    // ques.setAttribute("class","questions-"+question);
+    var option_1 = document.createElement("input");
+    option_1.setAttribute("type","text");
+    option_1.setAttribute("class","answer");
+    option_1.setAttribute("id","ans-"+stg_ques+"1");
 
-    // var ques_class = document.createElement("div");
-    // ques_class.setAttribute("class","Question");
-    // ques_class.appendChild(ques);
-    // // formID.appendChild(ques_class);
+    var option_2 = document.createElement("input");
+    option_2.setAttribute("type","text");
+    option_2.setAttribute("class","answer");
+    option_2.setAttribute("id","ans-"+stg_ques+"2");
 
-    // var option_1 = document.createElement("input");
-    // option_1.setAttribute("type","text");
-    // option_1.setAttribute("class","answer");
+    var option_3 = document.createElement("input");
+    option_3.setAttribute("type","text");
+    option_3.setAttribute("class","answer");
+    option_3.setAttribute("id","ans-"+stg_ques+"3");
 
-    // var option_2 = document.createElement("input");
-    // option_2.setAttribute("type","text");
-    // option_2.setAttribute("class","answer");
-
-    // var option_3 = document.createElement("input");
-    // option_3.setAttribute("type","text");
-    // option_3.setAttribute("class","answer");
-    
-    // var option_4 = document.createElement("input");
-    // option_4.setAttribute("type","text");
-    // option_4.setAttribute("class","answer");
-
-    // var ques_ans_div = document.getElementById("Question-Answer");
-    // ques_ans_div.append(ques);
-    // ques_ans_div.append(option_1);
-    // ques_ans_div.append(option_2);
-    // ques_ans_div.append(option_3);
-    // ques_ans_div.append(option_4);
+    var option_4 = document.createElement("input");
+    option_4.setAttribute("type","text");
+    option_4.setAttribute("class","answer");
+    option_4.setAttribute("id","ans-"+stg_ques+"4");
 
     // // var myParent = document.body;text
 
@@ -84,5 +73,12 @@ function addQuestion(){
     ques_div.appendChild(ques);
     ques_div.append(sel);
     formID.appendChild(ques_div);
+    formID.append(option_1);
+    formID.append(option_2);
+    formID.append(option_3);
+    formID.append(option_4);
+}
 
+function submitted(){
+    alert("Form Submitted");
 }
