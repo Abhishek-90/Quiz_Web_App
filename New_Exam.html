@@ -10,13 +10,13 @@
 
     <body>
         <div id="New_Exam_Container">
-            <form method="POST" action="#" id="ques_form">
+            <form method="post" action="new_Exam.php" id="ques_form">
                 <div class="ques_div">
                     <div class="ques_no_div">
                         Q1
                     </div>
                     <div class="ques">
-                        <input type="text" id="ques_input1" class="ques_input" placeholder="Enter a question.......">
+                        <input type="text" id="ques_input1" class="ques_input" placeholder="Enter a question......." name="ques-1-input">
                     </div>
                     <div>
                         <select name="answer_type" class="ans" id="ques_type1">
@@ -32,10 +32,9 @@
                 <input class="answer" type="text" id="ans-1-2">
                 <input class="answer" type="text" id="ans-1-3">
                 <input class="answer" type="text" id="ans-1-4">
-
             </form>            
             <div id="buttons">
-                <button type="submit" id="submit" form="ques_form" onclick="submitted()">Submit</button>
+                <button type="submit" id="submit" form="ques_form" >Submit</button>
                 <button id="Add_Question" onclick="addQuestion()" name="Add_Question">+ Add Question</button>
             </div>
         </div>  

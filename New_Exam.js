@@ -79,6 +79,6 @@ function addQuestion(){
     formID.append(option_4);
 }
 
-function submitted(){
-    alert("Form Submitted");
-}
+// function submitted(){
+//     alert("Form Submitted");
+// }

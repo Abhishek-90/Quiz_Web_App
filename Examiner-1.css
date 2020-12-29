@@ -1,6 +1,7 @@
 html, body{
-    margin: 0px;
-    height: 100%;
+    /* background-image: url("Grey_Texture.jpg"); */
+    background-color: rgb(163, 157, 157);
+    margin: 0;
 }
 
 #header{
@@ -22,39 +23,47 @@ html, body{
 
 
 #Examiner-1-Container{
-    background-image: url("Grey_Texture.jpg");
     width: 100%;
-    height: 100%;
+    height: 94%;
+    /* background-color:rgb(107, 38, 38); */
+    display: flex;
+    align-items: center;
 }
 
 #Buttons{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 94%;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: left; */
+    /* background-color: lawngreen; */
+    height: 98%;
+    width: 45%;
+    border-right: solid 3px black;
 }
 
 #New-Exam{
-    height: 98%;
-    width: 33%;
-    border-right: 3px solid black;
+    height: 50vh;
+    width: 100%;
+    /* border-right: 3px solid black; */
+    /* background-color: lemonchiffon; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#Check-Result{
+/* #Check-Result{
     height: 98%;
     width: 34%;
     border-right: 3px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 #Correct-Mistake{
-    height: 98vh;
-    width: 33%;
+    /* background-color: lightcoral; */
+    height: 50vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,4 +77,30 @@ a>button{
     font-size: x-large;
     border-radius: 20px;
     outline: none;
+}
+
+#new_exam{
+    /* margin-left: 85px; */
+    margin-top: 90px;
+}
+
+#correct_mistake{
+    /* margin-left: 85px; */
+    margin-bottom: 90px;
+}
+
+#Detail-Form{
+    background-color: blueviolet;
+    height: 98%;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#detail{
+    height: 60%;
+    width: 94%;
+    background-color: burlywood;
+    border-radius: 20px;
 }
