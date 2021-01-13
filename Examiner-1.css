@@ -128,6 +128,16 @@ input[type=time]{
     margin-right: 20px;
 }
 
+input[type=submit],input[type=reset]{
+    width: 100px;
+    height: 35px;
+    margin-top: 50px;
+    background-color: rgb(39, 39, 252);
+    color: whitesmoke;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
 form>div{
     margin-top: 20px;
     width: auto;

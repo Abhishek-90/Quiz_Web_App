@@ -6,6 +6,17 @@ function details(){
 
     if(detailBool == 1){
         var formID = document.getElementById("detail"); //getting form id
+
+        //creating field for exam code
+        var code_div = document.createElement("div");
+        code_div.setAttribute("id","code_div");
+
+        var Code_Label = document.createElement("label");
+        Code_Label.innerText = "Exam Code:";
+        Code_Label.setAttribute("id","codeID");
+        Code_Label.setAttribute("name","code");
+        code_div.appendChild(Code_Label);
+
         // creating input field to take email id
         var div_email = document.createElement("div");
         div_email.setAttribute("id","email_div");
@@ -95,11 +106,25 @@ function details(){
         minute_input.setAttribute("name","minute");
         duration.appendChild(minute_input);
 
+        //submit button for the form
+        var button_div = document.createElement("div");
+        button_div.setAttribute("id","button");
+
+        var submit_button = document.createElement("input");
+        submit_button.setAttribute("type","submit");
+        button_div.appendChild(submit_button);
+
+        var reset_button = document.createElement("input");
+        reset_button.setAttribute("type","reset");
+        button_div.appendChild(reset_button);
+
         //appending dynamically created elements above
+        formID.appendChild(code_div);
         formID.appendChild(div_email);
         formID.appendChild(teacher_div);
         formID.appendChild(timedate);
         formID.appendChild(duration);
+        formID.appendChild(button_div);
 
         detailBool = 0;
         correctBool = 1;
