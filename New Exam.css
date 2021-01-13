@@ -8,7 +8,7 @@ html, body{
     justify-content: center;
     align-items: center;
     /* background-color: black; */
-    background-image: url("Grey_Texture.jpg");
+    /* background-image: url("Grey_Texture.jpg"); */
 }
 
 #New_Exam_Container{
@@ -17,7 +17,7 @@ html, body{
     min-height: auto;
     display: flex;
     justify-content: center;
-    align-content: center;
+    /* align-content: center; */
     flex-direction: column;
     /* background-color: greenyellow; */
 }
@@ -57,16 +57,53 @@ html, body{
     align-items: center;
     width: 100%;
     height: auto;
-    /* background-color: blue; */
+    background-color: blue;
 }
 
-.questions{
+.ques_div{
     /* -----------inside div with id Question-----------   */
     /* background-color: brown; */
     height: 45px;
-    width: 80%;
+    width: 90%;
     margin-bottom: 5px;
     margin-top: 20px;
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: row;
+}
+
+.ques_no_div{
+    height: 100%;
+    /* background-color: cyan; */
+    width: 3%;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ques{
+    height: 100%;
+    width: 87%;
+    /* background-color: yellow; */
+}
+
+.ques_input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    /* background-color: tomato; */
+}
+
+.ans{
+    /* float: left; */
+    width: 120px;
+    height: 100%;
+    margin-left: 2px;
+    margin-right: 2px;
+    border: none;
+    outline: none;
+    font-size: medium
 }
 
 #buttons{
@@ -87,13 +124,10 @@ html, body{
     width: 25%;
     height: 35px;
     margin-bottom: 5px;
-    margin-right: 55%;
+    margin-right: 45%;
+    margin-left: 37px;
 }
 
-.ans{
-    float: left;
-    width: 16%;
-    height: 35px;
-    margin-bottom: 5px;
-    margin-right: 64%;
+form{
+    background-color: rgba(57, 3, 185, 0.925);
 }
