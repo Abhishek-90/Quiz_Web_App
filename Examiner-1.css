@@ -144,12 +144,16 @@ input[type=time]{
 input[type=submit],input[type=reset]{
     width: 100px;
     height: 35px;
-    /* margin-top: 50px; */
+    /* margin-top: 20px; */
     background-color: rgb(39, 39, 252);
     color: whitesmoke;
     margin-right: 40px;
     margin-left: 40px;
     outline: none;
+}
+
+#submit{
+    margin-top: 35px;
 }
 
 label[id=dummyID]{
@@ -164,6 +168,10 @@ form>div{
     height: 7%;
 }
 
-#email_div{
-    margin-right: 10px;
+#emailID_correct{
+    margin-left: 55px;
+}
+
+#password_input_correct{
+    margin-right: 30px;
 }

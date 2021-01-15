@@ -2,7 +2,12 @@
     <head>
         <title>Fun Quiz</title>
         <link rel="stylesheet" href="Examiner-1.css">
-        <script src="New_Exam_Detail.js"></script>
+        <script src="New_Exam_Detail.js">
+            function timepass(){ 
+                var r = document.getElementById("detail");
+                alert(r.getAttribute("method"));    
+            }
+        </script>
     </head>
     <body>
         <div id="header">
@@ -24,9 +29,6 @@
                 </div>
             </div>
             <div id="Detail-Form">
-                <form action="#" id="detail" method="#">
-                                        
-                </form>
             </div>
         </div>
     </body>

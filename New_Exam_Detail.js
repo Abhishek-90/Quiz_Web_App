@@ -1,11 +1,21 @@
 var detailBool = 1,correctBool = 1;
 
+function timepass(){
+    var r = document.getElementById("detail-form");
+    alert(r.getAttribute("method"));
+}
+
 function details(){
     if(correctBool == 0)
-        document.getElementById("detail").innerHTML = "";
+        document.getElementById("Detail-Form").innerHTML = "";
 
     if(detailBool == 1){
-        var formID = document.getElementById("detail"); //getting form id
+        var div = document.getElementById("Detail-Form");
+        //creating form
+        var formID = document.createElement("form");
+        // formID.setAttribute("id","detail-form");
+        // formID.setAttribute("action","New_Exam.php");
+        formID.setAttribute("method","POST");
 
         //creating field for exam code
         var code_div = document.createElement("div");
@@ -176,6 +186,8 @@ function details(){
 
         var submit_button = document.createElement("input");
         submit_button.setAttribute("type","submit");
+        submit_button.setAttribute("onClick","timepass()");
+        // submit_button.innerText = "Submit";
         button_div.appendChild(submit_button);
 
         var reset_button = document.createElement("input");
@@ -193,6 +205,8 @@ function details(){
         formID.appendChild(duration);
         formID.appendChild(button_div);
 
+        div.appendChild(formID);
+
         detailBool = 0;
         correctBool = 1;
     }
@@ -200,12 +214,15 @@ function details(){
 
 function correct_form(){    
     if(detailBool == 0){
-        document.getElementById("detail").innerHTML = "";
-
+        document.getElementById("Detail-Form").innerHTML = "";
     }
 
     if(correctBool == 1){
-        var formID = document.getElementById("detail"); //getting div where form is present
+        var div = document.getElementById("Detail-Form");
+        
+        var formID = document.createElement("form"); //getting div where form is present
+        // formID.setAttribute("action","Correct-Mistake.php");
+        formID.setAttribute("method","POST");
 
         var exam_code = document.createElement("div");
         exam_code.setAttribute("id","exam_code");
@@ -260,7 +277,9 @@ function correct_form(){
         //submit button
         var submit_button = document.createElement("input");
         submit_button.setAttribute("type","submit");
-        // button_div.appendChild(submit_button);
+        submit_button.setAttribute("id","submit");
+        submit_button.setAttribute("onclick","timepass()");
+
 
         //appending childs to form
 
@@ -268,6 +287,8 @@ function correct_form(){
         formID.appendChild(div_email);
         formID.appendChild(password_div);
         formID.appendChild(submit_button);
+
+        div.appendChild(formID);
         //===================================
         detailBool = 1;
         correctBool = 0;
