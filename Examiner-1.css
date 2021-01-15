@@ -1,10 +1,10 @@
 html, body{
-    background-color: rgb(163, 157, 157);
+    background-color: rgb(179, 172, 172);
     margin: 0;
 }
 
 #header{
-    background-color: rgb(119, 119, 119);
+    background-color: rgb(26, 25, 25);
     height: 6%;
     width: 100%;
     display: flex;
@@ -84,7 +84,7 @@ html, body{
 }
 
 form{
-    height: 75%;
+    height: 85%;
     width: 94%;
     background-color:darksalmon;
     border-radius: 20px;
@@ -100,6 +100,14 @@ label{
 
 label[name=date]{
     margin-left: 75px;
+}
+
+label[name=password]{
+    margin-left: 45px;
+}
+
+label[name=exam]{
+    margin-left: 10px;
 }
 
 #emailID{
@@ -123,13 +131,47 @@ input[name=minute],input[id=hourinput]{
     margin-right: 43px;
 }
 
+input[name=name]{
+    /* width: 70px; */
+    margin-right: 50px;
+}
+
 input[type=time]{
     width: 100px;
     margin-right: 20px;
+}
+
+input[type=submit],input[type=reset]{
+    width: 100px;
+    height: 35px;
+    /* margin-top: 20px; */
+    background-color: rgb(39, 39, 252);
+    color: whitesmoke;
+    margin-right: 40px;
+    margin-left: 40px;
+    outline: none;
+}
+
+#submit{
+    margin-top: 35px;
+}
+
+label[id=dummyID]{
+    margin-left: 5px;
+    margin-right: 75px;
+    font-size: 35px;
 }
 
 form>div{
     margin-top: 20px;
     width: auto;
     height: 7%;
+}
+
+#emailID_correct{
+    margin-left: 55px;
+}
+
+#password_input_correct{
+    margin-right: 30px;
 }
