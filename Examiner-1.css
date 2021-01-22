@@ -98,15 +98,15 @@ label{
     font-size: 25px;
 }
 
-label[name=date]{
+label[for=date]{
     margin-left: 75px;
 }
 
-label[name=password]{
+label[for=password1]{
     margin-left: 45px;
 }
 
-label[name=exam]{
+label[for=exam]{
     margin-left: 10px;
 }
 
@@ -121,22 +121,22 @@ input{
     font-size: 20px;
 }
 
-input[type=date],input[id=hourinput]{
+input[type=date]{
     width: 175px;
     margin-right: 20px;
 }
 
-input[name=minute],input[id=hourinput]{
+input[id=minute],input[id=hour]{
     width: 70px;
     margin-right: 43px;
 }
 
-input[name=name]{
+input[id=name]{
     /* width: 70px; */
     margin-right: 50px;
 }
 
-input[type=time]{
+input[id=time]{
     width: 100px;
     margin-right: 20px;
 }
@@ -156,9 +156,9 @@ input[type=submit],input[type=reset]{
     margin-top: 35px;
 }
 
-label[id=dummyID]{
+label[id=code]{
     margin-left: 5px;
-    margin-right: 75px;
+    margin-right: 150px;
     font-size: 35px;
 }
 
@@ -172,6 +172,6 @@ form>div{
     margin-left: 55px;
 }
 
-#password_input_correct{
+#password{
     margin-right: 30px;
 }

@@ -17,10 +17,11 @@ function addQuestion(){
     ques.setAttribute("class","ques");
     
     var ques_input = document.createElement("input");
-    ques_input.setAttribute("type","text");
-    ques_input.setAttribute("id","ques_input"+stg_ques);
-    ques_input.setAttribute("class","ques_input");
-    ques_input.setAttribute("placeholder","Enter a question.......");
+    ques_input.type = "text";
+    ques_input.id = "ques_input"+stg_ques;
+    ques_input.class = "ques_input";
+    ques_input.name = "ques-"+stg_ques+"input";
+    ques_input.placeholder = "Enter a question.......";
     ques.appendChild(ques_input);
 
     //---------------- creating answer_type field--------------
