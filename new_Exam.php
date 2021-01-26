@@ -1,15 +1,12 @@
 <html>
     <body>
         <?php 
-            // $Exam_Code = $_POST["code_name"];
-            $teacher_email_Id = $_POST["email_Label_name"];
-            // $password = $_POST["password"];
+            if(!isset($_GET["code_name"]))
+                echo "Error";
+            else
+                echo $_GET["code_name"];
 
-            // echo $Exam_Code." ". $teacher_email_Id . " " . $password;
-
-            // echo $_POST['ques-1-input'];
-            // <br>
-            // echo $_POST['ques-2-input'];
+            echo $_GET["email_Label_name"];
         ?>
     </body>
 </html>

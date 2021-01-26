@@ -1,5 +1,3 @@
-var detailBool = 1,correctBool = 1;
-
 function Exam_Code() {
     var result           = '';
     var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
@@ -13,21 +11,22 @@ function Exam_Code() {
     return result;
 }
 
-function details(){
-    if(correctBool == 0)
-        document.getElementById("Detail-Form").innerHTML = "";
+function console(){
+    var temp = document.getElementById("code");
 
-    if(detailBool == 1){
-        var div = document.getElementById("Detail-Form");
+    console.log(temp.value);
+}
+
+function details(){
+    	document.getElementById("Examiner_Section_Form").innerHTML = "";
+
         //creating form
-        var formID = document.createElement("form");
-        // formID.setAttribute("id","detail-form");
-        formID.setAttribute("action","new_Exam.php");
-        formID.setAttribute("method","POST");
+        var formID = document.getElementById("Examiner_Section_Form");
+        formID.action = "new_Exam.php";
 
         //creating field for exam code
         var code_div = document.createElement("div");
-        code_div.setAttribute("id","code_div");
+        code_div.id = "code_div";
 
         var Code_Label = document.createElement("label");
         Code_Label.innerText = "Exam Code:";
@@ -35,11 +34,11 @@ function details(){
         Code_Label.setAttribute("for","code");
         code_div.appendChild(Code_Label);
 
-        var dummy_Label = document.createElement("label");
-        dummy_Label.innerText = Exam_Code();
-        dummy_Label.setAttribute("id","code");
-        dummy_Label.setAttribute("name","code_name");
-        code_div.appendChild(dummy_Label);
+        var Exam_Code_Label = document.createElement("label");
+        Exam_Code_Label.value = Exam_Code();
+        Exam_Code_Label.id = "code";
+        Exam_Code_Label.name = "code_name";
+        code_div.appendChild(Exam_Code_Label);
 
         // creating input field to take email id
         var div_email = document.createElement("div");
@@ -73,119 +72,14 @@ function details(){
         teacher_input.setAttribute("placeholder","Teacher's Name...");
         teacher_input.setAttribute("required","");
         teacher_div.appendChild(teacher_input);
-
-        //taking password
-        var password_div = document.createElement("div");
-        password_div.setAttribute("id","password_div");
-
-        var password_label = document.createElement("label");
-        password_label.setAttribute("id","password_label");
-        password_label.innerText = "Password:";
-        password_label.setAttribute("for","password1");
-        password_div.appendChild(password_label);
-
-        var password_input = document.createElement("input");
-        password_input.setAttribute("type","password");
-        password_input.setAttribute("id","password1");
-        password_input.setAttribute("required","true");
-        password_input.setAttribute("placeholder","Enter strong password");
-        password_div.appendChild(password_input);
-
-        //taking College/ University name
-        var uni_col = document.createElement("div");
-        uni_col.setAttribute("id","uni-col");
-
-        var uni_col_label = document.createElement("label");
-        uni_col_label.setAttribute("for","name");
-        uni_col_label.setAttribute("id","uni-col-id");
-        uni_col_label.innerText = "College/University:";
-        uni_col.appendChild(uni_col_label);
-
-        var uni_col_input = document.createElement("input");
-        uni_col_input.setAttribute("id","name");
-        uni_col_input.setAttribute("required","true");
-        uni_col_input.setAttribute("placeholder","Enter College/University Name...");
-        uni_col.appendChild(uni_col_input);
-
-        //examination name
-        var exam_div = document.createElement("div");
-        exam_div.setAttribute("id","exam");
-
-        var exam_label = document.createElement("label");
-        exam_label.setAttribute("for","exam");
-        exam_label.setAttribute("id","exam-id");
-        exam_label.innerText = "Examination:";
-        exam_div.appendChild(exam_label);
-
-        var exam_input = document.createElement("input");
-        exam_input.setAttribute("id","exam");
-        exam_input.setAttribute("required","true");
-        exam_input.setAttribute("placeholder","Enter Examination Name...");
-        exam_div.appendChild(exam_input);
-
-        //Taking Date and time of Exam
-        var timedate = document.createElement("div")
-        timedate.setAttribute("id","td");
-
-        var date_label = document.createElement("label");
-        date_label.setAttribute("for","date");
-        date_label.setAttribute("id","dateID");
-        date_label.innerText = "Date:"
-        timedate.appendChild(date_label);
-
-        var date_input = document.createElement("input");
-        date_input.setAttribute("type","date");
-        date_input.setAttribute("id","date");
-        date_input.setAttribute("name","date");
-        date_input.setAttribute("required","");
-        timedate.appendChild(date_input);
-
-        var time_label = document.createElement("label");
-        time_label.setAttribute("for","time");
-        time_label.setAttribute("id","timeID");
-        time_label.innerText = "Time:"
-        timedate.appendChild(time_label);
-
-        var time_input = document.createElement("input");
-        time_input.setAttribute("type","time");
-        time_input.setAttribute("id","time");
-        time_input.setAttribute("required","");
-        timedate.appendChild(time_input);
-
-        //Taking duration of Exam
-        var duration = document.createElement("div")
-        duration.setAttribute("id","duration");
-
-        var hour_label = document.createElement("label");
-        hour_label.setAttribute("for","hour");
-        hour_label.setAttribute("id","hourID");
-        hour_label.innerText = "Hour:"
-        duration.appendChild(hour_label);
-
-        var hour_input = document.createElement("input");
-        hour_input.setAttribute("type","number");
-        hour_input.setAttribute("min","0");
-        hour_input.setAttribute("id","hour");
-        hour_input.setAttribute("required","");
-        duration.appendChild(hour_input);
-
-        var minute_label = document.createElement("label");
-        minute_label.setAttribute("for","minute");
-        minute_label.setAttribute("id","minuteID");
-        minute_label.innerText = "Minute:"
-        duration.appendChild(minute_label);
-
-        var minute_input = document.createElement("input");
-        minute_input.setAttribute("id","minute");
-        minute_input.setAttribute("required","");
-        duration.appendChild(minute_input);
-
+        
         //submit button for the form
         var button_div = document.createElement("div");
         button_div.setAttribute("id","button");
 
         var submit_button = document.createElement("input");
         submit_button.setAttribute("type","submit");
+        submit_button.onclick = "console()";
 
         // submit_button.innerText = "Submit";
         button_div.appendChild(submit_button);
@@ -198,31 +92,14 @@ function details(){
         formID.appendChild(code_div);
         formID.appendChild(div_email);
         formID.appendChild(teacher_div);
-        formID.appendChild(password_div);
-        formID.appendChild(uni_col);
-        formID.appendChild(exam_div);
-        formID.appendChild(timedate);
-        formID.appendChild(duration);
         formID.appendChild(button_div);
-
-        div.appendChild(formID);
-
-        detailBool = 0;
-        correctBool = 1;
-    }
 }
 
 function correct_form(){    
-    if(detailBool == 0){
-        document.getElementById("Detail-Form").innerHTML = "";
-    }
+        document.getElementById("Examiner_Section_Form").innerHTML = "";
 
-    if(correctBool == 1){
-        var div = document.getElementById("Detail-Form");
-        
-        var formID = document.createElement("form"); //getting div where form is present
+        var formID = document.getElementById("Examiner_Section_Form"); //getting div where form is present
         formID.setAttribute("action","new_Exam.php");
-        formID.setAttribute("method","POST");
 
         var exam_code = document.createElement("div");
         exam_code.setAttribute("id","exam_code");
@@ -287,10 +164,4 @@ function correct_form(){
         formID.appendChild(div_email);
         formID.appendChild(password_div);
         formID.appendChild(submit_button);
-
-        div.appendChild(formID);
-        //===================================
-        detailBool = 1;
-        correctBool = 0;
-    }
 }
