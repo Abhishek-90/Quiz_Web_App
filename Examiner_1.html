@@ -3,10 +3,6 @@
         <title>Fun Quiz</title>
         <link rel="stylesheet" href="Examiner-1.css">
         <script src="New_Exam_Detail.js">
-            function timepass(){ 
-                var r = document.getElementById("detail");
-                alert(r.getAttribute("method"));    
-            }
         </script>
     </head>
     <body>
@@ -19,18 +15,12 @@
         </div>        
         <div id="Examiner-1-Container">
             <div id="Buttons">
-                <div id="New-Exam">
-                    <button id="new_exam" onclick="details()">New Exam</button></a>
-                </div>
-                <div id="Correct-Mistake">
-                    <a href="#">
-                        <button id="correct_mistake" onclick="correct_form()">Correct Mistake</button>
-                    </a>
-                </div>
+                <button id="new_exam" onclick="details()" class="option_button">New Exam</button>
+
+                <button id="correct_mistake" onclick="correct_form()" class="option_button">Correct Mistake</button>
             </div>
             <div id="Detail-Form">
-                <form id="Examiner_Section_Form" method="GET">
-                </form>
+                <form id="Examiner_Section_Form" method="POST"></form>
             </div>
         </div>
     </body>

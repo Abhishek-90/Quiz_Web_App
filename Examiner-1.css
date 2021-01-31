@@ -1,3 +1,4 @@
+/* Common Properties */
 html, body{
     background-color: rgb(179, 172, 172);
     margin: 0;
@@ -31,39 +32,22 @@ html, body{
 #Buttons{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 98%;
     width: 45%;
     border-right: solid 3px black;
 }
 
-#New-Exam{
-    height: 50vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#Correct-Mistake{
-    height: 50vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #new_exam{
-    background-color:rgb(107, 38, 38);
-    width: 350px;
-    height: 100px;
-    color: white;
-    font-size: x-large;
-    border-radius: 20px;
-    outline: none;
-    margin-top: 90px;
+    margin-bottom: 90px;
 }
 
 #correct_mistake{
+    margin-top: 90px;
+}
+
+.option_button{
     background-color:rgb(107, 38, 38);
     width: 350px;
     height: 100px;
@@ -71,7 +55,6 @@ html, body{
     font-size: x-large;
     border-radius: 20px;
     outline: none;
-    margin-bottom: 90px;
 }
 
 #Detail-Form{
@@ -98,20 +81,12 @@ label{
     font-size: 25px;
 }
 
-label[for=date]{
+#dateID{
     margin-left: 75px;
-}
-
-label[for=password1]{
-    margin-left: 45px;
 }
 
 label[for=exam]{
     margin-left: 10px;
-}
-
-#emailID{
-    margin-left: 90px;
 }
 
 input{
@@ -119,47 +94,19 @@ input{
     height: 100%;
     margin-left: 5px;
     font-size: 20px;
+    outline: none;
 }
 
-input[type=date]{
-    width: 175px;
-    margin-right: 20px;
-}
-
-input[id=minute],input[id=hour]{
-    width: 70px;
-    margin-right: 43px;
-}
-
-input[id=name]{
-    /* width: 70px; */
-    margin-right: 50px;
-}
-
-input[id=time]{
-    width: 100px;
-    margin-right: 20px;
-}
-
-input[type=submit],input[type=reset]{
+button[type=submit]{
     width: 100px;
     height: 35px;
-    /* margin-top: 20px; */
     background-color: rgb(39, 39, 252);
     color: whitesmoke;
     margin-right: 40px;
     margin-left: 40px;
     outline: none;
-}
-
-#submit{
-    margin-top: 35px;
-}
-
-label[id=code]{
-    margin-left: 5px;
-    margin-right: 150px;
-    font-size: 35px;
+    margin-top: 20px;
+    font-size: larger;
 }
 
 form>div{
@@ -168,10 +115,60 @@ form>div{
     height: 7%;
 }
 
+
+
+/* Properties of Elements on Clicking Button New Exam */
+
+#password1_label{
+    margin-left: 40px;
+}
+
+#date{
+    width: 175px;
+    margin-right: 20px;
+}
+
+#emailID{
+    margin-left: 90px;
+}
+
+#minute,#hour{
+    width: 70px;
+    margin-right: 43px;
+}
+
+#name{
+    /* width: 70px; */
+    margin-right: 50px;
+}
+
+#time{
+    width: 100px;
+    margin-right: 20px;
+}
+
+#code{
+    margin-left: 5px;
+    margin-bottom: 50px;
+    font-size: 35px;
+    background: none;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: x-large;
+}
+
+#code_div{
+    background-color: aqua;
+    margin-bottom: 20px;
+}
+
+/* Properties of Elements on Clicking button Correct Mistakes */
+
 #emailID_correct{
     margin-left: 55px;
 }
 
-#password{
-    margin-right: 30px;
+#password2{
+    margin-right: 10px;
 }
